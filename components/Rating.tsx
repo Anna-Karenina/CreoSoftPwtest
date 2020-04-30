@@ -27,9 +27,9 @@ const Raiting: React.FC<IRaitingProps> = (props) => {
 const styled = StyleSheet.create({
   circle:{
     backgroundColor:'rgba(138, 140, 156, .5)',
-    width: 9, 
-    height: 9, 
-    marginRight: 3,
+    width: 12, 
+    height: 12, 
+    marginRight: 7,
     borderRadius:50,
   },
   circleRED:{

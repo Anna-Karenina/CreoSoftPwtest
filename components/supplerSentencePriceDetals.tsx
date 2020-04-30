@@ -16,13 +16,15 @@ const SupplerSentencePriceDetals:React.FC<any> = (props) => {
         <Card key = {i} containerStyle = {{...styled.container,  width:width}}>
           {
             props.productView === 'grid' ?
+            <>
             <View style ={{...styled.gridContainer, width:width }}>
               <Image
                 source={ item.image.big } 
-                style={{ width: 300, height: 200 }}
+                style={{ width: width, height: 290 }}
               />
-              <Divider />
             </View>
+              <Divider style = {{ width: width,height: 0.7}} />
+              </>
             :
             null
           }
@@ -31,14 +33,14 @@ const SupplerSentencePriceDetals:React.FC<any> = (props) => {
               props.productView === 'list' ? 
               <Image
                 source={ item.image.small }
-                style={{ width: 56, height: 56 }}
+                style={{ width: 70, height: 70 }}
               />
             : <View/>
             }
             rightElement ={
               <Image
                 source={ require('./../assets/basket.png') }
-                style={{ width: 45, height: 45 }}
+                style={{ width: 60, height: 60 }}
               />
             }
             title={item.name}
@@ -77,15 +79,19 @@ const SupplerSentencePriceDetals:React.FC<any> = (props) => {
 const styled = StyleSheet.create({
   container:{
     margin:0,
-    marginBottom: 8,
-    shadowOffset:{width: 3, height: 3},
+    marginBottom: 13,
+    shadowOffset:{width: 5, height: 5},
     shadowColor: Colors.shadow,
-    shadowOpacity: 5
+    shadowOpacity: 5,
+    paddingBottom: 0,
+    paddingTop: 0,
+    paddingLeft : 10,
+    paddingRight : 10
   },
   gridContainer:{
     flexDirection: 'row', 
     justifyContent:'center',
-    height:220
+    height:300
   },
   instockContainer:{
     flexDirection: 'row',
@@ -101,17 +107,17 @@ const styled = StyleSheet.create({
   nameText:{
     color: Colors.textblack ,
     fontWeight:'400',
-    fontSize:16,
+    fontSize:22,
   },
   costText:{
-    fontSize:18,
+    fontSize:22,
     fontWeight:'700',
     color:Colors.textblack,
     lineHeight: 30  ,
   },
   preoderedQuantityText:{
     color: Colors.icongrey,
-    fontSize: 14,
+    fontSize: 19,
     marginRight: 5,
     fontWeight:'400'
   },

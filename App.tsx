@@ -118,7 +118,7 @@ const TabsNavigation = () =>  {
     <Tab.Navigator 
       initialRouteName ='Price'
       tabBarOptions={{
-        style:{paddingTop: 18},
+        style:{paddingTop: 18 , height: 90},
         showLabel: false,
         activeTintColor: Colors.sunshine,
         inactiveTintColor: Colors.blackIconOpacity
@@ -128,19 +128,19 @@ const TabsNavigation = () =>  {
         component={suppliersStack} 
         options={{
           tabBarIcon: ({ color }) => (
-            <Fontisto name="shopping-store" color={color} size={30} />
+            <Fontisto name="shopping-store" color={color} size={35} />
           ),
       }}/>
       <Tab.Screen name="Price" component={ priceStack }         
         options={{
          tabBarIcon: ({ color }) => (
-          <Feather name="file-text" color={color} size={30} />
+          <Feather name="file-text" color={color} size={35} />
           ),
       }}/>
       <Tab.Screen name="contact" component={contactStack}  
         options={{
          tabBarIcon: ({ color }) => (
-          <MaterialCommunityIcons name="account-circle-outline" color={color} size={35} />
+          <MaterialCommunityIcons name="account-circle-outline" color={color} size={42} />
           ),
       }}/>
     </Tab.Navigator>
@@ -163,7 +163,7 @@ const styled = StyleSheet.create({
   },
   headerTitleStyle:{
     color:Colors.textblack,
-    fontSize: 20,
+    fontSize: 22,
     fontWeight:'700'
   }
 })

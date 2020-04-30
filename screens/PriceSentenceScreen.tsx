@@ -67,10 +67,10 @@ const PriceSentenceScreen = (props:any) => {
 const styled = StyleSheet.create({
   header:{
     margin: 18,
-    marginTop: 14,
+    marginTop: 5,
     marginBottom: 44,
     fontWeight:'400',
-    fontSize:14,
+    fontSize:18,
     lineHeight:24,
     color:Colors.textblack
   }
