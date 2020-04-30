@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 30" width="22" height="30">
+	<defs>
+		<image width="22" height="30" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAeCAMAAAAfOR5kAAAAAXNSR0IB2cksfwAAAKtQTFRFAAAAiYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuceo/cDQAAADl0Uk5TAA5SeoB/WxENcndofRBPTgRwbnQDSWsLYAFMagkCU2UIV2EFWV9NO2NVEzo4QEcgc3kjMGxpUAwYtE9V0wAAANJJREFUeJyF0umugjAQhuFBPpfigmhdUFEUd+tyFpf7vzIjwjCGEN8/tE9IS8gQWSUbceVKlbiaglOPa0A1mVtw2++VB3SslJ2uTlae10N/kGwwJGZ/hPEkzxRMMQvzTMEciyjPpJdY6Q8e2699tMJSS15j83pEW+wCwXsbu4Mx5tjASTCdL0j6kUzt37+4f3xw2jBhP+R8wVdwV8FunXMFF5xdwObGGcEqu1IJvj+4+/ezC94uODv/JdlAcLrriPHh3+uiJYYtzYGqUTaaaXbJoicophxmMufUMgAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<use id="Векторный смарт-объект" style="opacity: 0.502 fill: '#3333' " href="#img1" x="0" y="0" />
+</svg>

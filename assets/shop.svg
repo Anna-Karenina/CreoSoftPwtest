@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 30" width="35" height="30">
+	<defs>
+		<image width="35" height="30" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAeCAMAAACR41cYAAAAAXNSR0IB2cksfwAAAKhQTFRFAAAAiYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuciYuc9FivBQAAADh0Uk5TAAEwQC8XOAM6Pws5ISQlCD47BSsaGxA1NDYUPRwSDycmGAIHDjIWNywEKhkJIwoxKRMoDCAtBh9ijX17AAABUElEQVR4nK2S23qCMBCEA4MgKEo4KaX1gFpDxUOVtu//Zs0G/aqWeOVcMIH9vyyZLGNShol2WQa7qAPbbJONzgVxuq7H2uS5Pee87MNvRRgboN8shgEPNUzIg6FaRIg1CGMJIrIUI0PLGCOkl6dWKcYGi5G9PFIm/4Rr4vsTZ0H+qsThKzdhKvfBm0IeMAtv1HcCTMkdG7bKbQZMyN9gyWI+d4oOB8dgYSxX6GK1NBYD+c7fi2KeEzp3qakbe2vVXZQfytde3BQ2tFuF3NruZJtE7A+ftP1hLxLZcLe1clRNBjC18ZhgV0yRREJEGxl5NRWkWfWPiZowfDkp51xoLm4YD+NhWe5shCmOJelAB7ph0mZSjjilqNXXmu7xjqmfzEwQnUhfWGqZYn0+V1ZoGfZd+6Sf8D6fK0ab81MYLsQeGV1SD6a4Fr8w9oNhtmX9F3v3JgQEH6q3AAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<use id="Векторный смарт-объект" href="#img1" transform="matrix(1,0,0,1,0,0)"/>
+</svg>

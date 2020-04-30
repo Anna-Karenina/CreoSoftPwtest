@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="10" height="10">
+	<defs>
+		<filter id="flt1"> <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1   0 0 0 0 0.498   0 0 0 0 0.153   0 0 0 1 0" /> </filter>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { filter: url(#flt1);fill: filc } 
+	</style>
+	<path id="elipse" class="shp0" d="M0.71,4.68c0,2.49 2.01,4.5 4.5,4.5c2.49,0 4.5,-2.01 4.5,-4.5c0,-2.49 -2.01,-4.5 -4.5,-4.5c-2.49,0 -4.5,2.01 -4.5,4.5z" />
+</svg>
