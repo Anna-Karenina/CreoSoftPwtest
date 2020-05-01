@@ -11,6 +11,7 @@ import { Colors } from './core/Colors'
 
 import Info from './assets/info-button.svg'
 import PriceSentenceScreen from './screens/PriceSentenceScreen'
+import OrderSentenceScreen from './screens/orderSentenceScreen'
 import PriceScreen from './screens/PriceScreen'
 
 
@@ -69,6 +70,8 @@ const TabsNavigation = () =>  {
         component={PriceScreen}
         options={{
           title: "Прайс-листы",
+          headerStatusBarHeight:53,
+          headerTitleContainerStyle:{marginBottom: 10},
           headerStyle: { ...styled.headerStyle },
           headerTitleStyle:{...styled.headerTitleStyle},
           headerRightContainerStyle:{marginRight: 18},
@@ -94,7 +97,24 @@ const TabsNavigation = () =>  {
             <Info
               onPress= {()=>Alert.alert('Информация')} 
               color = {Colors.icongrey}
-              />
+            />
+          ),
+        }}
+      />
+      <PriceStack.Screen
+        name = 'OrderSentenceScreen'
+        component={OrderSentenceScreen}
+        options={{
+          title: "Прайс-листы",
+          headerStyle: { ...styled.headerStyle },
+          headerTitleStyle:{...styled.headerTitleStyle},
+          headerRightContainerStyle:{marginRight: 18},
+          headerTintColor: "white",
+          headerRight:()=>(
+            <Info
+              onPress= {()=>Alert.alert('Информация')} 
+              color = {Colors.icongrey}
+            />
           ),
         }}
       />

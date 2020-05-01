@@ -1,14 +1,16 @@
 import * as React from 'react'
 import { Card, Image,ListItem, Divider } from 'react-native-elements'
-import { View, Text, useWindowDimensions, StyleSheet } from 'react-native'
+import { View, Text, useWindowDimensions, StyleSheet, Alert } from 'react-native'
 
 import {supplerSentencePrice, supplerSentencePriceType} from './../core/data'
 import Raiting from './Rating'
 import { Colors } from '../core/Colors'
+import { useNavigation } from '@react-navigation/native'
 
 
 const SupplerSentencePriceDetals:React.FC<any> = (props) => {
-  const {width, height} = useWindowDimensions()
+  const {width} = useWindowDimensions()
+  const navi = useNavigation()
   return (
     <>
     {      
@@ -20,15 +22,16 @@ const SupplerSentencePriceDetals:React.FC<any> = (props) => {
             <View style ={{...styled.gridContainer, width:width }}>
               <Image
                 source={ item.image.big } 
-                style={{ width: width, height: 290 }}
+                style={{ width: width, height: 300 }}
               />
             </View>
-              <Divider style = {{ width: width,height: 0.7}} />
+              <Divider style = {{ width: width-30,height: 0.7}} />
               </>
             :
             null
           }
           <ListItem 
+            onPress = {()=>navi.navigate("OrderSentenceScreen", {PriceId : item.id, supplerdata: props.supplerdata})}
             leftElement={
               props.productView === 'list' ? 
               <Image
@@ -40,7 +43,7 @@ const SupplerSentencePriceDetals:React.FC<any> = (props) => {
             rightElement ={
               <Image
                 source={ require('./../assets/basket.png') }
-                style={{ width: 60, height: 60 }}
+                style={{ width: 55, height: 55, marginBottom: 12 }}
               />
             }
             title={item.name}
@@ -121,6 +124,5 @@ const styled = StyleSheet.create({
     marginRight: 5,
     fontWeight:'400'
   },
-
 })
 export default SupplerSentencePriceDetals

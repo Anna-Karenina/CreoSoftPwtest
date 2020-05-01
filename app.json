@@ -8,6 +8,7 @@
       "web"
     ],
     "version": "1.0.0",
+    "privacy": "public",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -40,6 +41,7 @@
         "svg"
       ]
     },
-    "description": "This project has  description, and this is 'CreoSoftTest."
+    "description": "This project has  description, and this is 'CreoSoftTest.",
+    "githubUrl": "https://github.com/Anna-Karenina/CreoSoftPwtest"
   }
 }

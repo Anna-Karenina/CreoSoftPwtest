@@ -12,7 +12,15 @@ import { Colors } from '../core/Colors'
 const PriceSentenceScreen = (props:any) => {
   const [productView, setProductView]  = React.useState('list')
   const [product] = React.useState(props.route.params.supplerdata.product)
-
+  const supplerdata = {        
+    key: props.route.params.supplerdata.id,
+    id: props.route.params.supplerdata.id,
+    logo: props.route.params.supplerdata.logo,
+    name: props.route.params.supplerdata.name,
+    product: props.route.params.supplerdata.product,
+    priceupload: props.route.params.supplerdata.priceupload,
+    badgecount: props.route.params.supplerdata.badgecount
+  }
   React.useLayoutEffect(() => {
     props.navigation.setOptions({
       title: product === '' ? 'No title' : product,
@@ -31,13 +39,13 @@ const PriceSentenceScreen = (props:any) => {
        productView === 'list' ? 
         <Fontisto
           name = 'nav-icon-grid-a'
-          size={25}
+          size={18}
           color={Colors.icongrey} 
           onPress ={()=> setProductView('grid')}
         /> :
         <Fontisto
           name = 'nav-icon-list-a'
-          size={25}
+          size={18}
           color={Colors.icongrey} 
           onPress ={()=> setProductView('list')}
         />
@@ -47,19 +55,13 @@ const PriceSentenceScreen = (props:any) => {
   
   return (
     <ScrollView style={StyleSheet.absoluteFill }>
-          <SupplerCard 
-            key= {props.route.params.supplerdata.id}
-            id={props.route.params.supplerdata.id} 
-            logo={props.route.params.supplerdata.logo} 
-            name={props.route.params.supplerdata.name} 
-            product={props.route.params.supplerdata.product} 
-            priceupload = {props.route.params.supplerdata.priceupload} 
-            badgecount={props.route.params.supplerdata.badgecount}
-          />
+      <SupplerCard 
+        supplerdata ={supplerdata}
+      />
       <Text style = {styled.header}>Описание прайса</Text>
       <SupplerSentencePriceDetals 
         productView = {productView}
-        supplerdata = {props.supplerdata}/>
+        supplerdata = {supplerdata}/>
     </ScrollView>
   )
 }
@@ -67,10 +69,10 @@ const PriceSentenceScreen = (props:any) => {
 const styled = StyleSheet.create({
   header:{
     margin: 18,
-    marginTop: 5,
-    marginBottom: 44,
+    marginTop: 15,
+    marginBottom: 50,
     fontWeight:'400',
-    fontSize:18,
+    fontSize:19,
     lineHeight:24,
     color:Colors.textblack
   }

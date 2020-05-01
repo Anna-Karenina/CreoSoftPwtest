@@ -9,13 +9,8 @@ const PriceScreen = () =>{
       {
         supplersList.map( (i:supplerListType) =>(
           <SupplerCard 
-            key= {i.id}
-            id={i.id} 
-            logo={i.logo} 
-            name={i.name} 
-            product={i.product} 
-            priceupload = {i.priceupload} 
-            badgecount={i.badgecount}
+            supplerdata ={i}
+            key = {i.id}
           />
         ))
       }

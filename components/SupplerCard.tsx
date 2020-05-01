@@ -1,17 +1,17 @@
 import * as React from 'react'
 import { ListItem } from 'react-native-elements'
 import { View,Text ,TouchableHighlight, StyleSheet } from 'react-native'
-import { useNavigation } from '@react-navigation/native'
+import { useNavigation, useRoute } from '@react-navigation/native'
 
-import { supplerListType } from '../core/data'
+
 import { Colors } from '../core/Colors'
 
 
-const SupplerCard: React.FC<supplerListType> = ({id, logo, name, product, priceupload, badgecount }) =>{
+const SupplerCard: React.FC<any> = ({supplerdata}) =>{
+  const {id, logo, name, product, priceupload, badgecount }  = supplerdata
   const navi = useNavigation()
-  const supplerdata: supplerListType = {
-    id, logo, name, product, priceupload, badgecount 
-  }
+  const route = useRoute();
+
   return (
     <ListItem
       key={id}
@@ -20,6 +20,7 @@ const SupplerCard: React.FC<supplerListType> = ({id, logo, name, product, priceu
       title ={name}
       titleStyle = {styled.titleText}
       containerStyle={
+        route.name === 'priceSentenceStack' || route.name === 'OrderSentenceScreen' ? styled.containerwithoutmargin : 
           id === 1 ? [styled.container,styled.fistchild ] : styled.container
         }
       leftAvatar={{ 
@@ -47,12 +48,15 @@ const styled = StyleSheet.create({
   container:{ 
     marginLeft:10, 
     marginRight:10, 
-    marginTop: 5,
-    marginBottom: 5,
-    minHeight:111 , 
+    marginTop: 4.5,
+    marginBottom: 4.5,
+    minHeight:104.5 , 
     shadowOffset:{width: 5, height: 5},
     shadowColor: Colors.shadow,
     shadowOpacity: 5
+  },
+  containerwithoutmargin:{
+    minHeight:104.5
   },
   titleText:{
     color: Colors.sunshine,
@@ -67,6 +71,7 @@ const styled = StyleSheet.create({
    fontSize: 20
   },
   priceuploadText:{
+    lineHeight: 20, 
     fontSize:16,
     fontWeight:'400',
     color: Colors.icongrey

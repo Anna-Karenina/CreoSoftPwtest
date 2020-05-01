@@ -109,13 +109,11 @@ export type supplerSentencePriceType = {
   }
 }
 
-
-// width: 128px;
-// height: 17px;
-// color: #101010;
-// color: #101010;
-// font-family: "SFUI Text";
-// font-size: 16px;
-// font-weight: 400;
-// /* Text style for "К, ружка F" */
-// color: #101010;
+export const isEmptyObject= (obj:Object) =>  {
+  for (var i in obj) {
+    if (obj.hasOwnProperty(i)) {
+      return false;
+    }
+  }
+  return true;
+}
