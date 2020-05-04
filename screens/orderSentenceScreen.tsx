@@ -9,7 +9,7 @@ import {supplerSentencePrice, supplerSentencePriceType,isEmptyObject} from './..
 import SupplerCard from '../components/SupplerCard'
 
 const OrderScreen: React.FC<any> = (props) => {
-  const {width} = useWindowDimensions()
+  const {width, height} = useWindowDimensions()
   const [item, setItem] = React.useState<supplerSentencePriceType | any>()
   const [productView, setProductView]  = React.useState('list')
   const [product] = React.useState(props.route.params.supplerdata.product)
@@ -58,7 +58,7 @@ const OrderScreen: React.FC<any> = (props) => {
     <>
     {
       item === undefined ? <></> :
-      <ScrollView>
+      <ScrollView style={{position:'absolute'}}>
         <SupplerCard 
           supplerdata ={props.route.params.supplerdata}
         />
@@ -107,16 +107,19 @@ const OrderScreen: React.FC<any> = (props) => {
       </View>
     </View>
   </Card>
-  <View style = {{flexDirection:"row", width:width}}>
+  </ScrollView>
+    }
+  <View style = {{...StyleSheet.absoluteFillObject, top:height-241}}>
+    <View style = {{flexDirection:"row",}}>
     <Text style ={{width:width/2, textAlign:'center', alignSelf:'center',fontSize:27,fontWeight:'800'}} >130 000 ₽</Text>
+
     <Button 
       buttonStyle = {{backgroundColor: Colors.sunshine,height:62}}
       containerStyle ={{width:width/2,margin:0, padding: 0}}
       title="Оформить заказ"
-    />
+      />
+      </View>
   </View>
-  </ScrollView>
-    }
     
     </>
   )
@@ -175,5 +178,8 @@ const styled = StyleSheet.create({
     marginRight: 5,
     fontWeight:'400'
   },
+  createorder:{
+    position: 'absolute'
+  }
 })
 export default OrderScreen

@@ -13,6 +13,7 @@ import Info from './assets/info-button.svg'
 import PriceSentenceScreen from './screens/PriceSentenceScreen'
 import OrderSentenceScreen from './screens/orderSentenceScreen'
 import PriceScreen from './screens/PriceScreen'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 
 function suppliersScreen() {
@@ -138,8 +139,9 @@ const TabsNavigation = () =>  {
     <Tab.Navigator 
       initialRouteName ='Price'
       tabBarOptions={{
-        style:{paddingTop: 18 , height: 90},
+        style:{height: 90, borderTopColor:Colors.icongrey, borderBottomWidth:1,paddingBottom:20 },
         showLabel: false,
+        tabStyle:{paddingTop:22,paddingLeft:10},
         activeTintColor: Colors.sunshine,
         inactiveTintColor: Colors.blackIconOpacity
       }}>
@@ -148,19 +150,19 @@ const TabsNavigation = () =>  {
         component={suppliersStack} 
         options={{
           tabBarIcon: ({ color }) => (
-            <Fontisto name="shopping-store" color={color} size={35} />
+            <Fontisto name="shopping-store" color={color} size={33} style={{marginLeft: -25}} />
           ),
       }}/>
       <Tab.Screen name="Price" component={ priceStack }         
         options={{
          tabBarIcon: ({ color }) => (
-          <Feather name="file-text" color={color} size={35} />
+          <Feather name="file-text" color={color} size={40} />
           ),
       }}/>
       <Tab.Screen name="contact" component={contactStack}  
         options={{
          tabBarIcon: ({ color }) => (
-          <MaterialCommunityIcons name="account-circle-outline" color={color} size={42} />
+          <MaterialCommunityIcons name="account-circle-outline" color={color} size={42}  style={{marginRight: -25}}/>
           ),
       }}/>
     </Tab.Navigator>
